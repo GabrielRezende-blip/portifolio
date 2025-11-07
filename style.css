@@ -1,0 +1,759 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: 0.4s;
+}
+
+body {
+    background: var(--body);
+    overflow: cover;
+    /* position: relative; */
+    background-attachment: fixed;
+    background-position: center center;
+    width: 100%;
+}
+:root{
+    --body: white;
+    --fundo:#873333;
+    --textocor: white;
+    --fundoprojeto: #D9D9D9; 
+    --textotitulo: #873333;
+    --habilidadecolor: black;
+    --switchmodecolor: #C4C4C4;
+    --cor-contato: black;
+    --txt-footer: white;
+}
+.dark-mode{
+     --body: black;
+     --fundo:#2A2A2A;
+    --textocor: white;
+    --fundoprojeto: #2A2A2A; 
+    --textotitulo: #873333;
+    --habilidadecolor: black;
+    --switchmodecolor: #C4C4C4; 
+    --cor-contato: white;
+    --txt-footer: #873333;
+}
+
+canvas {
+    display: block;
+    width: 98%;
+    height: 100vh;
+}
+
+header {
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    font-size: 50px;
+    color: var(--textocor);
+    height: 7vh;
+    width: 100%;
+    background-color: var(--fundo);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: white solid 1px;
+}
+
+header>a span {
+    color: var(--textocor);
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+#switchmode{
+    border-radius: 35px;
+    height: 75px;
+    width: 75px;
+    background-color: var(--switchmodecolor);
+    position: absolute;
+    right: 25px;
+    bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#swtchmode img {
+    height: 150%;
+    width: 100%;
+}
+
+.categoria {
+    display: inline-block;
+    height: 7%;
+    position: relative;
+
+}
+
+#primeiro {
+
+    top: 10px;
+    left: 56%;
+    padding: 2px 25px;
+    text-decoration: none;
+    color: var(--textocor);
+    position: relative;
+}
+
+#segundo {
+    top: 10px;
+    left: 58%;
+    padding: 2px 25px;
+
+    text-decoration: none;
+    color: var(--textocor);
+    position: relative;
+}
+
+#terceiro {
+    top: 10px;
+    left: 60%;
+    padding: 2px 25px;
+
+    text-decoration: none;
+    color: var(--textocor);
+    position: relative;
+}
+#quarto {
+    top: 10px;
+    left: 61%;
+    padding: 2px 25px;
+
+    text-decoration: none;
+    color: var(--textocor);
+    position: relative;
+}
+
+rect {
+
+    fill: none;
+    stroke: var(--textocor);
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+}
+
+svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#fundotxt {
+    height: 35vh;
+    position: absolute;
+    left: 55%;
+    top: 8%;
+}
+
+#primeiro:hover {
+    background: rgba(red, 0);
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    rect {
+        stroke-width: 5;
+        stroke-dasharray: 15, 310;
+        stroke-dashoffset: 48;
+        transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+}
+
+#segundo:hover {
+    background: rgba(red, 0);
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    rect {
+        stroke-width: 5;
+        stroke-dasharray: 15, 310;
+        stroke-dashoffset: 48;
+        transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+}
+
+#terceiro:hover {
+    background: rgba(red, 0);
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    rect {
+        stroke-width: 5;
+        stroke-dasharray: 15, 310;
+        stroke-dashoffset: 48;
+        transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+}
+#quarto:hover {
+    background: rgba(red, 0);
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    rect {
+        stroke-width: 5;
+        stroke-dasharray: 15, 310;
+        stroke-dashoffset: 48;
+        transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+}
+
+#foto {
+    height: 180px;
+    width: 190px;
+    position: absolute;
+    top: 40%;
+    left: 41%;
+    object-fit: cover;
+    /* background-color: black; */
+    border-radius: 45%;
+}
+
+#foto img {
+    height: 100%;
+    width: 115%;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+#text {
+    position: relative;
+}
+
+#foto #text #nome {
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    color: var(--textotitulo);
+    font-size: 45px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 35px;
+}
+
+#foto #text #cargo {
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    color: var(--textotitulo);
+    font-size: 25px;
+    left: 39px;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+}
+
+#sobre-mim {
+    width: 100%;
+    height: 40vh;
+    background-color: var(--fundo);
+    margin-top: 100vh;
+    position: relative;
+}
+
+#sobre-mim svg {
+
+    height: 30vh;
+    position: absolute;
+    top: 11%;
+    left: 21%;
+
+}
+
+.titulo {
+    color: var(--textocor);
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+}
+
+#txtsobremim {
+    text-align: center;
+    width: 28%;
+    color: var(--textocor);
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+
+    font-size: 30px;
+    position: absolute;
+    top: 31%;
+    left: 57%;
+}
+
+#particleCanvas {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#projetos {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#meusprojetos {
+    height: 80%;
+    width: 80%;
+    background-color: var(--fundoprojeto);
+    border-radius: 4%;
+    color: var(--textotitulo);
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+}
+
+#meusprojetos span {
+    font-weight: 500;
+    font-size: 100px;
+    margin-left: 38%;
+    margin-bottom: -10%;
+}
+
+#hubprojetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+}
+
+.git {
+    position: relative;
+    border-radius: 35px;
+    margin-top: 25px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.git span {
+
+    color: var(--textocor);
+}
+
+.git svg {
+    opacity: 0;
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    left: 86%;
+    top: 17%;
+    transition: 0.5s;
+    fill:var(--textocor);
+}
+
+.git:hover svg {
+    opacity: 1;
+}
+
+#sistema-bancario {
+    text-shadow:
+        1px 1px 2px black,
+        0 0 1em white;
+    height: 15%;
+    width: 80%;
+    background-image: url(img/Conheca-a-Estrutura-do-Sistema-Financeiro-Nacional.webp);
+    background-size: cover;
+    transition: 0.5s;
+
+}
+
+#recriacao-belara {
+    text-shadow:
+        1px 1px 2px black,
+        0 0 1em white;
+    height: 15%;
+    width: 80%;
+    background-image: url(img/h1_hero1.jpg);
+    background-size: cover;
+    transition: 0.5s;
+}
+
+#recriacao-bitmap {
+    text-shadow:
+        1px 1px 2px black,
+        0 0 1em white;
+    height: 15%;
+    width: 80%;
+    background-image: url(img/home-banner.jpg);
+    transition: 0.5s;
+}
+#ver-mais {
+    text-shadow:
+        1px 1px 2px black,
+        0 0 1em white;
+    height: 15%;
+    width: 80%;
+    background-image: url(img/Imagens-posts-blog-47-1920x1280.jpg);
+    transition: 0.5s;
+    position: relative;
+}
+#ver-mais span{
+    position: absolute;
+    top: 10%;
+    left: 8.5%;
+}
+
+#ver-mais svg {
+    opacity: 0;
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    left: 86%;
+    top: 17%;
+    transition: 0.5s;
+    fill:var(--textocor);
+}
+
+#ver-mais:hover svg {
+    opacity: 1;
+}
+.git:hover {
+    flex-grow: 3;
+}
+
+#habilidades{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--fundo);
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#titulo-habilidade{
+    color: var(--textocor);
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    
+}
+.linguagem{
+    transition: 0.3s;
+    position: relative;
+    border-radius: 20px;
+    margin-top: 12%;
+    margin-left: 2%;
+    height: 10%;
+    width: 25%;
+    background-color: var(--switchmodecolor);
+}
+.linguagem img{
+    z-index: 99;
+    position: absolute;
+    left: -80px;
+    top: -10px;
+    height: 105px;
+    width: 100px;
+}
+.mais-informacao{
+    border-radius: 5px;
+    transition: 0.5s;
+    opacity:0 ;
+    height: 40px;
+    width: 85%;
+    background-color: var(--switchmodecolor);
+    position: absolute;
+    left: 9%;
+    bottom: 0;
+}
+.linguagem:hover .mais-informacao{
+    bottom: -36px;
+    opacity: 1;
+}
+.linguagem:hover .mais-informacao .progress .progress-bar-html{
+    animation: progress-animation 4s infinite;
+}
+.linguagem:hover .mais-informacao .progress .progress-bar-csharp{
+    animation: progress-animation-csharp 4s infinite;
+}
+.linguagem:hover .mais-informacao .progress .progress-bar-js{
+    animation: progress-animation-js 4s infinite;
+}
+.linguagem:hover .mais-informacao .progress .progress-bar-css{
+    animation: progress-animation-css 4s infinite;
+}
+.linguagem:hover .mais-informacao .progress .progress-bar-sql{
+    animation: progress-animation-sql 4s infinite;
+}
+.linguagem:hover .mais-informacao .progress .progress-bar-linux{
+    animation: progress-animation-linux 4s infinite;
+}
+.progress{
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-left: 2%;
+    height: 15px;
+    width: 75%;
+    background-color: var(--textotitulo);
+    position: relative;
+}
+
+.progress .progress-bar-html{
+    border-radius: 5px;
+   position: absolute;
+   height: 100%;
+   background-color: var(--habilidadecolor);
+}
+.progress .progress-bar-csharp{
+    border-radius: 5px;
+   position: absolute;
+   height: 100%;
+   background-color: var(--habilidadecolor);
+}
+.progress .progress-bar-js{
+    border-radius: 5px;
+   position: absolute;
+   height: 100%;
+   background-color: var(--habilidadecolor);
+}
+.progress .progress-bar-css{
+    border-radius: 5px;
+   position: absolute;
+   height: 100%;
+   background-color: var(--habilidadecolor);
+}
+.progress .progress-bar-sql{
+    border-radius: 5px;
+   position: absolute;
+   height: 100%;
+   background-color: var(--habilidadecolor);
+}
+.progress .progress-bar-linux{
+    border-radius: 5px;
+   position: absolute;
+   height: 100%;
+   background-color: var(--habilidadecolor);
+}
+@keyframes progress-animation{
+    0% { width: 0%; }
+    100% { width: 60%}
+}
+@keyframes progress-animation-csharp{
+    0% { width: 0%; }
+    100% { width: 40%}
+}
+@keyframes progress-animation-js{
+    0% { width: 0%; }
+    100% { width: 20%}
+}
+@keyframes progress-animation-css{
+    0% { width: 0%; }
+    100% { width: 60%}
+}
+@keyframes progress-animation-sql{
+    0% { width: 0%; }
+    100% { width: 55%}
+}
+@keyframes progress-animation-linux{
+    0% { width: 0%; }
+    100% { width: 35%}
+}
+.porcentagem{
+
+    font-size: 45px;
+    color: var(--habilidadecolor);
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    position: absolute;
+    right: -70px;
+    top: -10px;
+}
+
+#check { position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0;
+z-index: 99;}
+
+#sol { opacity: 1;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);}
+#lua { opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);}
+
+#check:checked~#sol { opacity: 0 !important;}
+
+#check:checked~#lua { opacity: 1;}
+
+.text-sobre-habilidades{
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    top: 15%;
+    left: 9%;
+    text-align: center;
+    opacity: 1;
+    font-family: "Momo Trust Display", sans-serif;
+  font-weight: 400;
+    font-size: 14px;
+    transition: 4s;
+}
+.linguagem:hover .mais-informacao .text-sobre-habilidades{
+    opacity: 1;
+}
+#contato{
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form{
+    height: 95%;
+    width: 80%;
+    background-color: var(--fundoprojeto);
+    border-radius: 20%;
+}
+#titulo-form{
+    color: var(--textotitulo);
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    position: absolute;
+    left: 38%;
+}
+#contato form{
+    top: 25%;
+    left: 15%;
+    width: 70%;
+    height: 85%;
+}
+
+#mensagem-contato{
+    position: absolute;
+    text-align: center;
+    top: 35%;
+    left: 13%;
+    height: 45%;
+    width: 75%;
+    background-color: var(--cor-contato);
+    border-radius: 15px;
+    color: var(--body);
+
+}
+
+#nome-contato{
+    position: absolute;
+    top: 23%;
+    left: 25%;
+    text-align: center;
+    height: 10%;
+    width: 25%;
+    background-color: var(--cor-contato);
+    border-radius: 15px;
+    color: var(--body);
+}
+#email-contato{
+    background-color: var(--cor-contato);
+    border-radius: 15px;
+    position: absolute;
+    top: 23%;
+    left: 51%;
+    text-align: center;
+    height: 10%;
+    width: 25%;
+    color: var(--body);
+}
+#btn-contato{
+    position: absolute;
+    top: 85%;
+    left: 46%;
+    height: 7%;
+    width: 10%;
+    background-color: var(--cor-contato);
+    border-radius: 15px;
+    color: var(--body);
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+}
+#footer{
+    height: 45vh;
+    width: 100%;
+    background-color: var(--fundo);
+    position: relative;
+}
+#txt-footer{
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--body);
+    font-size: 45px;
+    position: absolute;
+    left: 25%;
+    top: 35%;
+}
+#titulo-footer{
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--body);
+    font-size: 125px;
+    position: absolute;
+    left: 16%;
+    top: 4%;
+}
+#caixa-redes{
+    height: 65%;
+    width: 18%;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    border-radius: 35px;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr ;
+}
+.social{
+    margin-left: 25%;
+    margin-top: 13%;
+}
+#txt-voltaire-footer{
+    position: absolute;
+    left: 55%;
+    top: 10%;
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    color: var(--textocor);
+}
+#txt-voltaire-footer span{
+    color: var(--txt-footer);
+    position: absolute;
+    top: 26%;
+    left: 4%;
+}
+
